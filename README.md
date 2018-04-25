@@ -1,4 +1,4 @@
-### Description
+## Description
 
 Prepare a Rails application in a container ready to be started. It was created to be used as a part of a more complex docker config to start a Rails application.
 
