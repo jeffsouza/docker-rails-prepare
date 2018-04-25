@@ -13,6 +13,7 @@ Without database
 $ docker container run -it -p 3000:3000 \
                            -v APPLICATION_PATH:/usr/src/app/rails-app \
                            --entrypoint /usr/bin/remove_server_pid \
+                           --entrypoint /usr/bin/run_bundle_install \
                            IMAGE_NAME \
                            bash
 ```
@@ -23,6 +24,7 @@ $ docker container run -it -p 3000:3000 \
                            -v APPLICATION_PATH:/usr/src/app/rails-app \
                            --link YOUR_DB_CONTAINER_NAME \
                            --entrypoint /usr/bin/remove_server_pid \
+                           --entrypoint /usr/bin/run_bundle_install \
                            --entrypoint /usr/bin/run_migrate \
                            IMAGE_NAME \
                            bash
